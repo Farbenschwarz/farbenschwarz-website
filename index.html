@@ -3,197 +3,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#11110f">
-  <meta name="description" content="Farbenschwarz – Musik, die niemand bestellt hat. Ein satirisches Musikprojekt zwischen Moritat, Rock, Country und allem, was schiefgehen kann.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Farbenschwarz – Musik, die niemand bestellt hat.">
-  <meta property="og:description" content="Satire, Musik und schlechte Entscheidungen. Veröffentlichungen, das kommende Album und allerhand Unnötiges.">
-  <meta property="og:url" content="https://farbenschwarz.ch/">
+  <meta name="theme-color" content="#0a0a0c">
   <meta name="color-scheme" content="dark">
-  <title>Farbenschwarz — Musik, die niemand bestellt hat.</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Farbenschwarz: Musik, die niemand verlangt hat. Satirische Songs zwischen Rock, Moritat, Country und allerlei musikalischem Unsinn.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Farbenschwarz – Musik mit Nebenwirkungen">
+  <meta property="og:description" content="Satire aus der Schweiz. Eigenwillige Lieder, ein verdächtiger Pudel und Musik, die auf Streamingplattformen zu finden ist. Leider.">
+  <meta property="og:url" content="https://farbenschwarz.ch/">
+  <meta property="og:image" content="https://farbenschwarz.ch/logo-farbenschwarz.webp">
+  <title>Farbenschwarz | Musik mit Nebenwirkungen</title>
+  <link rel="icon" href="favicon.png" type="image/png">
   <style>
-    :root{--ink:#11110f;--black:#0b0b0a;--paper:#ede8db;--cream:#c5bdae;--stroke:#5e5b52;--acid:#dfdf8f;--red:#a84032;--font-ui:Arial,Helvetica,sans-serif;--font-head:Georgia,'Times New Roman',serif}
+    :root{--bg:#0a0a0c;--surface:#141416;--card:#1b1b1f;--edge:#37373b;--text:#f6f3ed;--muted:#b5b2b0;--pink:#fa168a;--yellow:#ffce21;--cyan:#21bbf9;--green:#11c39b;--max:1120px}
     *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:95px}
-    body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--font-ui);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.10;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,#ffffff09 4px),repeating-linear-gradient(90deg,transparent,transparent 5px,#ffffff06 6px)}
-    a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid var(--acid);outline-offset:5px}
-    .wrap{max-width:1220px;margin:0 auto;padding:0 32px}
-    .site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(17,17,15,.91);border-bottom:1px solid #ffffff22}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;min-height:73px;gap:18px}
-    .brand{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:900;letter-spacing:-.7px}
-    .brand-mark{display:grid;place-items:center;width:37px;height:37px;border:1.5px solid var(--acid);border-radius:50%;color:var(--acid);font-family:var(--font-head);font-size:20px;font-style:italic;transform:rotate(-13deg)}
-    .nav{display:flex;gap:26px;align-items:center}.nav a{font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:1.8px;color:#d9d3c5}.nav a:hover{color:var(--acid)}
-    .nav .nav-out{border:1px solid #6c685e;padding:11px 13px;transition:border-color .2s}.nav .nav-out:hover{border-color:var(--acid)}
-    .hero{position:relative;min-height:680px;padding:72px 0 80px;overflow:hidden;border-bottom:1px solid #5d584d}
-    .hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);gap:42px;align-items:center;min-height:526px}
-    .eyebrow{display:flex;align-items:center;gap:13px;color:var(--acid);font-size:10px;letter-spacing:2.8px;font-weight:800;text-transform:uppercase}
-    .eyebrow::before{content:"";width:31px;height:1px;background:currentColor}
-    h1,h2,h3,p{margin:0}
-    h1{margin:35px 0 24px;position:relative;font-family:var(--font-head);font-size:clamp(74px,10vw,148px);font-weight:900;letter-spacing:-.092em;line-height:.81;text-transform:uppercase;max-width:900px;white-space:nowrap}
-    h1 span{display:block}h1 .bottom{padding-left:.24em;color:var(--acid);font-style:italic}
-    .hero-lead{font-family:var(--font-head);font-style:italic;font-size:clamp(22px,2.35vw,31px);letter-spacing:-.6px;margin:0 0 19px}
-    .hero-text{max-width:420px;font-size:14px;line-height:1.8;color:var(--cream);margin-bottom:35px}
-    .actions{display:flex;flex-wrap:wrap;gap:13px;align-items:center}
-    .button{display:inline-flex;align-items:center;justify-content:space-between;min-height:47px;gap:23px;border:1px solid #817c70;padding:14px 17px;font-size:11px;letter-spacing:1.3px;font-weight:800;text-transform:uppercase;transition:transform .2s,background .2s,color .2s}
-    .button:hover{transform:translateY(-2px);background:#39372f}.button.primary{background:var(--acid);color:var(--ink);border-color:var(--acid)}.button.primary:hover{background:#f5f5b0}
-    .hero-art{position:relative;min-height:420px;display:grid;place-items:center}
-    .record{position:absolute;aspect-ratio:1;width:min(100%,480px);border-radius:50%;background:radial-gradient(circle at center,#bdb3a4 0 2%,#1c1c19 2.1% 14%,#34322d 14.1% 15.5%,#0a0a09 15.6% 25%,#24231f 25.4% 25.6%,#0b0b0a 26% 35%,#26251f 35.3% 35.5%,#0c0c0b 36% 45%,#25231e 45.1% 45.3%,#0b0b0a 46% 55%,#292821 55.1% 55.3%,#090908 55.6% 64%,#27251e 64.1% 64.3%,#080807 65%);box-shadow:0 24px 80px #000a,inset 0 0 0 2px #aaa3;transform:rotate(-11deg)}
-    .record::before{content:"";position:absolute;inset:4%;border:1px solid #ffffff25;border-radius:50%}
-    .record-label{position:absolute;inset:36%;border:1px solid #b0a46b;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#c9c389;color:#141410;transform:rotate(14deg);box-shadow:0 1px 13px #000d}
-    .record-label small{font-size:7px;letter-spacing:2.2px}.record-label strong{font-family:var(--font-head);font-size:clamp(31px,5vw,50px);font-style:italic;line-height:1}
-    .record-label em{font-size:6px;font-weight:bold;letter-spacing:2px;font-style:normal}
-    .stamp{position:absolute;top:7%;right:-3%;z-index:2;border:2px solid var(--red);border-radius:50%;width:135px;height:135px;display:grid;place-content:center;text-align:center;color:#d67162;font-size:12px;font-weight:900;letter-spacing:2px;line-height:1.5;text-transform:uppercase;transform:rotate(19deg);background:#171410dd}
-    .stamp::before{content:"";position:absolute;inset:7px;border:1px dashed currentColor;border-radius:50%}
-    .scribble{position:absolute;bottom:2%;right:0;font-family:var(--font-head);font-style:italic;color:var(--cream);font-size:17px;transform:rotate(-8deg)}
-    .paw{appearance:none;display:inline-grid;place-items:center;cursor:pointer;border:0;background:transparent;color:var(--acid);font-size:22px;transition:transform .2s}
-    .paw:hover{transform:rotate(-15deg) scale(1.2)}
-    .hero-paw{position:absolute;left:48%;bottom:3%}
-    .ticker{overflow:hidden;border-bottom:1px solid #5d584d;background:#d9d387;color:#131310;padding:13px 0;font-size:10px;letter-spacing:2.1px;text-transform:uppercase;font-weight:900}
-    .ticker p{white-space:nowrap;max-width:100%;text-align:center}
-    .section{padding:104px 0;border-bottom:1px solid #5d584d}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:43px}
-    .section-no{font-size:11px;color:var(--acid);letter-spacing:2px;margin-bottom:18px;font-weight:bold}
-    h2{font-family:var(--font-head);font-size:clamp(43px,5.4vw,76px);font-weight:500;line-height:.95;letter-spacing:-.058em}
-    h2 i{font-weight:400;color:var(--acid)}
-    .section-detail{max-width:275px;font-size:12px;line-height:1.7;color:var(--cream)}
-    .track-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .track{border:1px solid #5c584e;background:#1a1916;min-width:0;transition:transform .2s,border-color .2s}
-    .track:hover{transform:translateY(-4px);border-color:#a9a087}
-    .cover{position:relative;aspect-ratio:1;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:26px;isolation:isolate}
-    .cover::after{content:"";position:absolute;inset:12px;border:1px solid #ffffff35;z-index:-1}
-    .cover .cover-small{font-size:9px;letter-spacing:2.5px;font-weight:900;text-transform:uppercase}
-    .cover strong{font-family:var(--font-head);font-size:clamp(31px,3.9vw,53px);letter-spacing:-2px;line-height:.93;font-weight:600;z-index:2}
-    .cover small{z-index:2;letter-spacing:2.6px;font-size:9px;font-weight:800}
-    .moritat{background:radial-gradient(circle at 67% 43%,#4c4036 0 11%,transparent 27%),linear-gradient(135deg,#29251e,#100f0d 67%);color:#e7dac1}
-    .moritat::before{content:"";position:absolute;width:150%;height:150%;border:1px solid #ac8d6177;border-radius:50%;top:25%;left:25%;box-shadow:0 0 0 26px #ac8d6115,0 0 0 54px #ac8d6115,0 0 0 91px #ac8d6115;z-index:-1}
-    .gabi{background:#c9b9a0;color:#29251f}.gabi::before{content:"✿";position:absolute;top:1%;right:3%;font-size:clamp(150px,22vw,300px);line-height:1;color:#9d4e3d55;transform:rotate(-24deg);z-index:-1}.gabi::after{border-color:#4f453b}
-    .haidi{background:linear-gradient(160deg,#718174,#344638 72%);color:#f0e9d5}.haidi::before{content:"";position:absolute;bottom:-26%;left:-18%;width:140%;height:75%;background:#203229;clip-path:polygon(0 65%,17% 38%,28% 48%,45% 10%,59% 30%,80% 0,100% 55%,100% 100%,0 100%);z-index:-1}
-    .track-body{padding:22px 24px 24px}.track-meta{font-size:10px;letter-spacing:2px;color:var(--acid);font-weight:bold;text-transform:uppercase;margin-bottom:11px}.track h3{font-family:var(--font-head);font-weight:400;font-size:24px;letter-spacing:-.4px;line-height:1.1;margin-bottom:12px}.track-desc{font-size:12px;line-height:1.7;color:var(--cream);min-height:60px}.track-link{display:inline-flex;gap:10px;align-items:center;color:var(--paper);font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:1px;margin-top:20px;padding-bottom:4px;border-bottom:1px solid var(--acid)}.track-link:hover{color:var(--acid)}
-    .album-section{background:#1b1a16}.album-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,7vw,95px);align-items:center}
-    .album-cover{position:relative;aspect-ratio:1;background:#050504;border:1px solid #38362d;box-shadow:17px 19px 0 #11110f,0 18px 40px #0004;display:flex;align-items:center;justify-content:center;flex-direction:column;overflow:hidden}
-    .album-cover::after{content:"";position:absolute;inset:18px;border:1px solid #ffffff13;pointer-events:none}
-    .halo{height:90px;width:180px;border:14px solid #e7d9a0;border-radius:50%;transform:rotate(-7deg);box-shadow:0 0 27px #e7d9a074,0 0 53px #e7d9a033,inset 0 0 20px #f3e9b067;margin-bottom:40px}
-    .album-cover .scrawl{font-family:var(--font-head);font-size:clamp(27px,4vw,52px);font-weight:400;font-style:italic;transform:rotate(-7deg);letter-spacing:-2px}.album-cover .year{font-family:var(--font-head);font-size:clamp(50px,7vw,99px);letter-spacing:-6px;color:#c7bc9b}.album-cover .type{position:absolute;bottom:30px;right:30px;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#9f998f}
-    .album-copy h2{margin-bottom:30px}.album-copy>p{font-size:15px;line-height:1.9;color:var(--cream);max-width:440px;margin-bottom:30px}.small-note{font-family:var(--font-head);font-style:italic;font-size:17px;color:#aba493;margin-top:28px}
-    .listen{background:var(--paper);color:var(--ink)}
-    .listen .section-no{color:#7b4033}.listen h2 i{color:#8c3f30}.listen .section-detail{color:#5c5547}
-    .platforms{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #9e998c;border-bottom:1px solid #9e998c}
-    .platform{display:flex;flex-direction:column;gap:13px;padding:33px 27px;border-right:1px solid #9e998c;transition:background .2s}.platform:last-child{border:0}.platform:hover{background:#dad4c6}.platform-top{display:flex;align-items:center;justify-content:space-between}.platform-symbol{font-family:var(--font-head);font-style:italic;font-size:23px;line-height:1}.platform .platform-name{font-family:var(--font-head);font-size:27px;letter-spacing:-.8px}.platform .platform-note{font-size:11px;color:#615a4f;line-height:1.5}
-    .caution{font-size:11px;color:#6d6559;margin-top:19px;line-height:1.7}
-    .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:65px;align-items:start}
-    .about-copy{font-family:var(--font-head);font-size:clamp(21px,2.7vw,32px);line-height:1.45;letter-spacing:-.4px}.about-copy p+p{margin-top:22px;color:var(--cream)}
-    .facts{border-top:1px solid #686357;margin-top:35px}.fact{display:grid;grid-template-columns:105px 1fr;gap:15px;padding:18px 0;border-bottom:1px solid #686357;font-size:13px}.fact span:first-child{color:var(--acid);font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:bold}.fact span:last-child{line-height:1.55;color:var(--cream)}
-    .foot{background:#090908;padding:45px 0 60px}.foot-grid{display:grid;grid-template-columns:1fr auto;align-items:start;gap:35px}.foot-title{font-family:var(--font-head);font-size:clamp(44px,8vw,104px);letter-spacing:-.09em;text-transform:uppercase;line-height:.9}.foot-caption{font-size:11px;line-height:1.75;color:#aaa393;margin-top:27px}.foot-side{text-align:right;font-size:10px;line-height:2;letter-spacing:1.2px;text-transform:uppercase;color:#a29b8b}.foot-side a{text-decoration:underline;text-underline-offset:4px}.foot-side a:hover{color:var(--acid)}
-    .secret-panel{display:none;margin:30px 0 0;padding:29px;border:1px dashed var(--acid);background:#202019}.secret-panel.open{display:block}.secret-panel h3{font-family:var(--font-head);font-size:26px;font-weight:normal;margin-bottom:11px}.secret-panel p{font-size:13px;line-height:1.7;color:var(--cream)}
-    .toast{position:fixed;z-index:100;bottom:27px;right:24px;background:var(--acid);color:var(--ink);padding:15px 20px;border:1px solid var(--ink);max-width:290px;font-size:12px;line-height:1.6;box-shadow:7px 7px 0 #0007;transform:translateY(150%);opacity:0;transition:transform .25s,opacity .25s}.toast.show{transform:translateY(0);opacity:1}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    @media(max-width:1020px){h1{font-size:clamp(58px,8.4vw,104px)}.hero-grid{grid-template-columns:1fr .85fr;gap:10px}.hero-art{min-height:350px}.stamp{width:104px;height:104px;font-size:9px}.track-grid{gap:12px}.cover{padding:20px}.track-body{padding:18px}}
-    @media(max-width:740px){.wrap{padding:0 20px}.header-inner{flex-wrap:wrap;min-height:0;padding-top:14px;padding-bottom:13px;gap:12px}.nav{justify-content:space-between;gap:9px;width:100%;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{font-size:9px;white-space:nowrap;letter-spacing:1px}.nav .nav-out{padding:7px 9px}.brand{font-size:14px}.brand-mark{width:28px;height:28px;font-size:15px}html{scroll-padding-top:125px}.hero{padding:58px 0 60px}.hero-grid{grid-template-columns:1fr;gap:22px}.hero-art{min-height:290px;max-width:355px;width:100%;margin:auto}.record{max-width:305px}.stamp{right:0;top:0}.hero-paw{left:12%;bottom:14px}h1{font-size:clamp(61px,13.5vw,110px);margin-top:29px}.hero-lead{margin-top:18px}.hero-text{margin-bottom:24px}.ticker{font-size:8px;padding:12px 16px}.ticker p{white-space:normal;line-height:1.5}.section{padding:75px 0}.section-head{display:block;margin-bottom:29px}.section-detail{margin-top:20px}.track-grid{grid-template-columns:1fr;max-width:500px;margin:0 auto;gap:21px}.cover{max-height:500px}.cover strong{font-size:clamp(42px,9vw,70px)}.gabi::before{font-size:300px}.track-desc{min-height:0}.album-grid,.about-grid{grid-template-columns:1fr;gap:50px}.album-cover{max-width:470px;width:100%;margin:auto}.album-copy{grid-row:1}.platforms{grid-template-columns:1fr}.platform{padding:22px 12px;border-right:0;border-bottom:1px solid #9e998c}.platform:last-child{border-bottom:0}.platform .platform-name{font-size:25px}.foot-grid{grid-template-columns:1fr}.foot-side{text-align:left}.foot-title{font-size:clamp(45px,11vw,85px)}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+    body:before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:0 0 auto 0;height:900px;background:radial-gradient(ellipse at 72% 20%,rgba(250,22,138,.11),transparent 48%),radial-gradient(ellipse at 25% 5%,rgba(33,187,249,.055),transparent 48%)}
+    a{color:inherit;text-decoration:none}button{font:inherit}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+    img{display:block;max-width:100%;height:auto}
+    .wrap{max-width:var(--max);margin:auto;padding:0 28px}
+    .header{position:sticky;top:0;z-index:10;background:rgba(10,10,12,.94);border-bottom:1px solid #ffffff20;backdrop-filter:blur(12px)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:74px}
+    .brand{display:inline-flex;align-items:center;font-family:Impact,'Arial Black',Arial,sans-serif;font-size:clamp(20px,2.3vw,28px);font-weight:900;letter-spacing:.1px;white-space:nowrap}
+    .brand .one{color:var(--pink)}.brand .two{color:var(--yellow)}.brand .three{color:var(--cyan)}.brand .four{color:var(--green)}.brand .five{color:var(--yellow)}.brand .white{color:white}
+    .brand:hover{filter:brightness(1.2)}
+    .nav{display:flex;align-items:center;gap:26px}
+    .nav a{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:#e0dcd8}
+    .nav a:hover{color:var(--yellow)}
+    .nav .nav-highlight{border:1px solid #6c6a6b;padding:8px 13px;border-radius:3px}
+    .hero{padding:74px 0 92px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.01fr 1fr;align-items:center;gap:40px}
+    .kicker{display:flex;align-items:center;gap:10px;color:var(--cyan);font-size:11px;text-transform:uppercase;letter-spacing:2.2px;font-weight:900}
+    .kicker:before{content:"";width:22px;height:2px;background:currentColor;flex:none}
+    .hero h1{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:clamp(50px,6.4vw,84px);letter-spacing:-1.7px;line-height:.99;margin:25px 0 23px;text-transform:uppercase;font-weight:900}
+    .hero h1 em{font-style:normal;color:var(--yellow)}
+    .hero .intro{color:#d1cdca;font-size:clamp(15px,1.5vw,18px);max-width:520px;line-height:1.7;margin:0 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:47px;border-radius:3px;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:900;padding:13px 18px;border:1px solid #6a686b;background:transparent;transition:background .2s,transform .2s,color .2s}
+    .btn:hover{background:#242429;transform:translateY(-2px)}
+    .btn.primary{background:var(--yellow);border-color:var(--yellow);color:#101013}.btn.primary:hover{background:#ffe266}
+    .hero-image{position:relative;margin:0;padding:0;min-width:0}
+    .hero-image img{width:100%;object-fit:contain;filter:drop-shadow(0px 14px 42px #0009)}
+    .hero-image figcaption{position:absolute;right:2%;bottom:2%;font-size:10px;text-transform:uppercase;letter-spacing:1.6px;color:#9a9597;transform:rotate(-5deg)}
+    .rule{border-top:1px solid var(--edge)}
+    .slogan{padding:15px 0;display:flex;justify-content:center;align-items:center;text-align:center;gap:14px;color:#121212;background:var(--yellow);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1.7px}
+    .slogan b{font-size:18px;line-height:1}
+    .section{padding:80px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:33px}
+    .section-index{font-size:11px;letter-spacing:2px;color:var(--pink);text-transform:uppercase;font-weight:900;margin:0 0 12px}
+    h2{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:clamp(38px,4.5vw,58px);line-height:1.03;letter-spacing:.15px;text-transform:uppercase;margin:0;font-weight:900}
+    h2 span{color:var(--yellow)}
+    .section-note{font-size:13px;color:var(--muted);max-width:285px;margin:0}
+    .covers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .song{min-width:0;background:var(--card);border:1px solid var(--edge);border-radius:5px;overflow:hidden;transition:transform .2s,border-color .2s}
+    .song:hover{transform:translateY(-4px);border-color:#787276}
+    .song img{width:100%;aspect-ratio:1;object-fit:cover}
+    .song-copy{padding:17px 17px 19px}
+    .song-title{margin:0 0 7px;font-size:18px;line-height:1.23;font-weight:900}
+    .song-note{margin:0;min-height:44px;color:#bab6b4;font-size:12px;line-height:1.55}
+    .song-link{display:inline-flex;gap:8px;align-items:center;margin-top:15px;font-size:11px;text-transform:uppercase;font-weight:900;letter-spacing:1px;color:var(--yellow);border-bottom:1px solid #80721e;padding-bottom:3px}
+    .song-link:hover{color:#fff}
+    .listen{background:#101013;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+    .listen-grid{display:grid;grid-template-columns:1fr 1.25fr;align-items:center;gap:56px}
+    .listen p{font-size:14px;color:#bdb9b8;max-width:400px;margin:16px 0 0}
+    .links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .platform{min-height:126px;border:1px solid #59565b;border-radius:4px;padding:19px 14px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s,transform .2s}
+    .platform:hover{background:#242329;transform:translateY(-2px)}
+    .platform .symbol{font-size:23px;line-height:1;color:var(--cyan)}
+    .platform strong{display:block;font-size:15px;line-height:1.2}
+    .platform small{display:block;color:#c4c1c0;font-size:10px;margin-top:6px}
+    .album{padding:55px 0;border-bottom:1px solid var(--edge)}
+    .album-inner{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;border-left:4px solid var(--pink);padding-left:26px}
+    .album .eyebrow{font-size:11px;color:var(--pink);font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+    .album h2{font-size:clamp(30px,3.8vw,49px)}
+    .album p{margin:12px 0 0;color:var(--muted);font-size:14px;max-width:640px}
+    .album-year{display:flex;align-items:center;justify-content:center;color:var(--yellow);font-size:clamp(28px,5vw,63px);font-family:Impact,'Arial Black',Arial,sans-serif;letter-spacing:-1px;transform:rotate(-5deg);opacity:.9;min-width:165px}
+    .about{padding:73px 0 80px}
+    .about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:72px}
+    .about h2{font-size:clamp(35px,4vw,51px)}
+    .about-copy{font-size:15px;line-height:1.85;color:#c8c5c2}
+    .about-copy p{margin:0 0 12px}.about-copy p:last-child{margin:0}
+    .footer{background:#050506;border-top:1px solid #38363a;padding:32px 0 36px}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+    .footer small{font-size:12px;line-height:1.7;color:#a6a2a2}
+    .footer a{font-size:12px;color:#eceae7}.footer a:hover{color:var(--yellow)}
+    .paw{appearance:none;border:0;background:transparent;color:#a4a09e;cursor:pointer;font-size:17px;padding:5px 8px;line-height:1;transition:transform .2s,color .2s}
+    .paw:hover{color:var(--pink);transform:rotate(19deg) scale(1.15)}
+    .paw-in-hero{position:absolute;left:4%;bottom:6%}
+    .paw-next{font-size:14px;margin:0 0 0 4px}
+    .secret{display:none;border:1px solid var(--pink);margin-top:26px;padding:21px;background:#21121a;border-radius:4px}
+    .secret.open{display:block}.secret strong{color:var(--yellow)}.secret p{font-size:13px;color:#d7cdcf;margin:8px 0 0;line-height:1.7}
+    .toast{position:fixed;z-index:70;left:50%;bottom:25px;transform:translate(-50%,25px);background:#eecb26;color:#101015;border:1px solid #f7e5a3;padding:12px 17px;box-shadow:0 10px 35px #000b;font-size:12px;font-weight:800;border-radius:5px;pointer-events:none;opacity:0;transition:opacity .2s,transform .2s;max-width:calc(100% - 30px);text-align:center}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:900px){.hero-grid{gap:20px}.hero{padding:58px 0 65px}.covers{grid-template-columns:repeat(2,minmax(0,1fr))}.listen-grid{grid-template-columns:1fr;gap:24px}.about-grid{gap:28px}.hero h1{font-size:clamp(48px,6.8vw,75px)}}
+    @media(max-width:600px){.wrap{padding:0 18px}.header-inner{min-height:62px}.brand{font-size:20px}.nav{gap:13px}.nav a{font-size:10px;letter-spacing:.3px}.nav a[href="#projekt"]{display:none}.nav .nav-highlight{padding:6px 9px}.hero{padding:37px 0 52px}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(45px,12.1vw,75px);margin-top:17px}.hero .intro{font-size:15px}.hero-image{max-width:410px;margin:12px auto 0;width:100%}.hero-image figcaption{right:6%;bottom:-5%}.slogan{padding:12px 14px;font-size:9px;letter-spacing:.8px}.section{padding:54px 0}.section-head{display:block;margin-bottom:24px}.section-note{margin-top:13px;max-width:440px}.covers{gap:11px}.song-copy{padding:13px 12px 15px}.song-title{font-size:16px}.song-note{font-size:11px;min-height:52px}.song-link{font-size:10px;letter-spacing:.2px;margin-top:10px}.links{gap:8px}.platform{padding:13px 9px;min-height:119px}.platform strong{font-size:12px}.platform small{font-size:9px}.album{padding:44px 0}.album-inner{gap:10px;padding-left:17px}.album-year{min-width:70px;font-size:31px}.about{padding:52px 0}.about-grid{grid-template-columns:1fr;gap:20px}.footer-inner{align-items:start}}
+    @media(max-width:370px){.nav a[href="#musik"]{display:none}.covers{grid-template-columns:1fr 1fr}.brand{font-size:18px}.album-year{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
   </style>
 </head>
 <body>
-  <header class="site-header">
+  <header class="header">
     <div class="wrap header-inner">
-      <a class="brand" href="#anfang" aria-label="Farbenschwarz, zurück zum Anfang"><span class="brand-mark" aria-hidden="true">F</span> FARBENSCHWARZ</a>
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#musik">Musik</a><a href="#album">Das Album</a><a href="#anhoeren">Anhören</a><a href="#projekt">Das Projekt</a><a class="nav-out" href="#unten">Kontakt ↘</a>
-      </nav>
+      <a class="brand" href="#start" aria-label="Farbenschwarz – Startseite"><span class="one">F</span><span class="two">A</span><span class="three">R</span><span class="four">B</span><span class="five">EN</span><span class="white">SCHWARZ</span></a>
+      <nav class="nav" aria-label="Hauptnavigation"><a href="#musik">Musik</a><a href="#projekt">Projekt</a><a class="nav-highlight" href="#streaming">Anhören ↗</a></nav>
     </div>
   </header>
-
-  <main id="anfang">
-    <section class="hero" aria-labelledby="site-title">
+  <main id="start">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Musikalische Zumutungen seit 1997</div>
-          <h1 id="site-title"><span>Farben</span><span class="bottom">schwarz.</span></h1>
-          <p class="hero-lead">Musik, die niemand bestellt hat.</p>
-          <p class="hero-text">Und die trotzdem erscheint. Zwischen Moritat, Rock, Country, schrägem Humor und erschütterndem Ernst in kleinen Dosen. Willkommen bei einem Projekt, das sich hartnäckig jeder vernünftigen Erklärung entzieht.</p>
-          <div class="actions"><a href="#musik" class="button primary">Die Musik entdecken <span aria-hidden="true">↗</span></a><a href="#projekt" class="button">Wer tut so etwas? <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-copy">
+          <div class="kicker">Schweizer Musikprojekt · Ungefragt seit 1997</div>
+          <h1 id="hero-title">Musik mit<br><em>Neben-</em><br>wirkungen.</h1>
+          <p class="intro">Moritat, Rock, Country und andere Zwischenfälle. Farbenschwarz macht Musik für Menschen mit einer gewissen Leidensfähigkeit.</p>
+          <div class="actions"><a class="btn primary" href="#musik">Lieder entdecken <span aria-hidden="true">↓</span></a><a class="btn" href="#streaming">Zu den Plattformen <span aria-hidden="true">↗</span></a></div>
         </div>
-        <div class="hero-art" aria-label="Illustration einer Schallplatte">
-          <div class="record" aria-hidden="true"><div class="record-label"><small>UNNÖTIGE MUSIK</small><strong>FS</strong><em>33⅓ PROBLEME / MIN</em></div></div>
-          <div class="stamp" aria-hidden="true">Nicht<br>amtlich<br>empfohlen</div>
-          <div class="scribble">Die Nadel steckt fest.</div>
-          <button class="paw hero-paw" data-easter="1" aria-label="Geheimnisvolle Pfote entdecken" title="Was macht denn das hier?">♣</button>
-        </div>
+        <figure class="hero-image"><img src="logo-farbenschwarz.webp" width="1100" height="1100" fetchpriority="high" alt="Das Farbenschwarz-Logo: ein halb farbenfroher, halb angekohlter Pudel mit Krone und wildem Blick"><figcaption>Der Pudel bestreitet alles.</figcaption><button type="button" class="paw paw-in-hero" data-easter="pudel" aria-label="Verdächtige Pfote untersuchen" title="Was war das denn?">✣</button></figure>
       </div>
     </section>
-
-    <div class="ticker" aria-label="Satirischer Hinweis"><p>✳ JETZT AUF STREAMINGDIENSTEN ✳ GESCHMACK NICHT INBEGRIFFEN ✳ RÜCKGABE AUSGESCHLOSSEN ✳</p></div>
-
-    <section class="section" id="musik" aria-labelledby="musik-title">
+    <div class="slogan"><b>✳</b> Verfügbar auf allen Streamingdiensten. Leider. <b>✳</b></div>
+    <section class="section" id="musik" aria-labelledby="music-heading">
       <div class="wrap">
-        <div class="section-head">
-          <div><p class="section-no">01 / DIE BEWEISSTÜCKE</p><h2 id="musik-title">Einige <i>Vergehen.</i></h2></div>
-          <p class="section-detail">Eine kleine Auswahl. Die Cover unten sind vorläufige Platzhalter und werden später durch die Originale ersetzt.</p>
-        </div>
-        <div class="track-grid">
-          <article class="track">
-            <div class="cover moritat" role="img" aria-label="Gestalteter Platzhalter für das Cover von Des Bänkelsängers Moritat"><span class="cover-small">Farbenschwarz / 2026</span><strong>Des<br>Bänkelsängers<br>Moritat</strong><small>EINE FAMILIENANGELEGENHEIT</small></div>
-            <div class="track-body"><div class="track-meta">Single · 31. Oktober 2026</div><h3>Des Bänkelsängers Moritat</h3><p class="track-desc">Eine finstere Geschichte über zwei Brüder, einen Steuereintreiber und missglückte Gastfreundschaft.</p><a class="track-link" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/search/Farbenschwarz%20Des%20B%C3%A4nkels%C3%A4ngers%20Moritat">Auf Spotify suchen <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="track">
-            <div class="cover gabi" role="img" aria-label="Gestalteter Platzhalter für das Cover von Oh Gabi"><span class="cover-small">Farbenschwarz / 2026</span><strong>Oh<br>Gabi!</strong><small>BLUMEN SIND AUCH NUR MENSCHEN</small></div>
-            <div class="track-body"><div class="track-meta">Single · 2026</div><h3>Oh Gabi!</h3><p class="track-desc">Blumen, grosse Gefühle und ein Liebeslied, das möglicherweise besser nie gesungen worden wäre.</p><a class="track-link" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/search/Farbenschwarz%20Oh%20Gabi">Auf Spotify suchen <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="track">
-            <div class="cover haidi" role="img" aria-label="Gestalteter Platzhalter für das Cover von s’Häidi"><span class="cover-small">Farbenschwarz / 2026</span><strong>s’Häidi</strong><small>ÄI ÄI ÄI</small></div>
-            <div class="track-body"><div class="track-meta">Angekündigt · 2026</div><h3>s’Häidi</h3><p class="track-desc">Ein Ausflug in die Schweizer Alpen. Die Berge sind schön. Bei allem anderen wäre ich vorsichtig.</p><a class="track-link" href="#anhoeren">Streamingplattformen <span aria-hidden="true">↓</span></a></div>
-          </article>
+        <div class="section-head"><div><p class="section-index">01 / Musikalische Vergehen</p><h2 id="music-heading">Die <span>Beweisstücke</span></h2></div><p class="section-note">Vier Kostproben aus dem Farbenschwarz-Universum. Die Cover sind echt. Die guten Absichten waren es auch einmal.</p></div>
+        <div class="covers">
+          <article class="song"><img src="cover-oh-gabi.webp" width="820" height="820" loading="lazy" alt="Originalcover Oh Gabi! – bunte Blumen und farbige Schrift"><div class="song-copy"><h3 class="song-title">Oh Gabi!</h3><p class="song-note">Grosse Gefühle am Blumenstand. Gewisse Risiken inbegriffen.</p><a class="song-link" href="https://open.spotify.com/search/Farbenschwarz%20Oh%20Gabi" target="_blank" rel="noopener noreferrer" aria-label="Oh Gabi auf Spotify suchen">Spotify-Suche ↗</a></div></article>
+          <article class="song"><img src="cover-s-haeidi.webp" width="820" height="820" loading="lazy" alt="Originalcover s’Häidi – alpine Landschaft mit Ziegen und einer grossen Holztafel"><div class="song-copy"><h3 class="song-title">s’Häidi</h3><p class="song-note">Ein Ausflug auf die Alp. Die Geissen waren nicht einverstanden.</p><a class="song-link" href="https://open.spotify.com/search/Farbenschwarz%20H%C3%A4idi" target="_blank" rel="noopener noreferrer" aria-label="s'Häidi auf Spotify suchen">Spotify-Suche ↗</a></div></article>
+          <article class="song"><img src="cover-briefmarkensammlung.webp" width="820" height="820" loading="lazy" alt="Originalcover Briefmarkensammlung – ein Sammler mit Lupe und zahlreichen Briefmarken"><div class="song-copy"><h3 class="song-title">Briefmarken&shy;sammlung</h3><p class="song-note">Ein Hobby voller Leidenschaft. Und erstaunlich vieler Briefmarken.</p><a class="song-link" href="https://open.spotify.com/search/Farbenschwarz%20Briefmarkensammlung" target="_blank" rel="noopener noreferrer" aria-label="Briefmarkensammlung auf Spotify suchen">Spotify-Suche ↗</a></div></article>
+          <article class="song"><img src="cover-der-parfuemeur.webp" width="820" height="820" loading="lazy" alt="Originalcover Der Parfümeur – ein älterer Herr in einer bunten südlichen Gasse mit Duftwolke"><div class="song-copy"><h3 class="song-title">Der Parfümeur</h3><p class="song-note">Ein musikalischer Duft, der sich hartnäckig hält.</p><a class="song-link" href="https://open.spotify.com/search/Farbenschwarz%20Der%20Parf%C3%BCmeur" target="_blank" rel="noopener noreferrer" aria-label="Der Parfümeur auf Spotify suchen">Spotify-Suche ↗</a></div></article>
         </div>
       </div>
     </section>
-
-    <section class="section album-section" id="album" aria-labelledby="album-title">
-      <div class="wrap album-grid">
-        <div class="album-cover" role="img" aria-label="Stilisierter Platzhalter: schwarzes Albumcover, Heiligenschein und Jahreszahl 2027"><div class="halo" aria-hidden="true"></div><div class="scrawl">das Leben ist hart</div><div class="year">2027</div><div class="type">Das Album</div></div>
-        <div class="album-copy"><p class="section-no">02 / IN ARBEIT</p><h2 id="album-title">Das Leben<br>ist <i>hart.</i></h2><p>Ein Album über die grossen Fragen des Lebens. Und über einige Fragen, die besser nie gestellt worden wären. Hymnen, Moritaten, Geschichten und gelegentlich sogar Musik.</p><p>Die Arbeiten laufen. Bis dahin gibt es einzelne Lieder zu entdecken – musikalisch oft erstaunlich ernst gemeint, inhaltlich etwas weniger.</p><span class="button" style="cursor:default">Das Album entsteht <span aria-hidden="true">✳</span></span><p class="small-note">Erscheinung geplant. Versprechen können wir nichts.</p></div>
-      </div>
-    </section>
-
-    <section class="section listen" id="anhoeren" aria-labelledby="anhoeren-title">
-      <div class="wrap"><div class="section-head"><div><p class="section-no">03 / UNGEFRAGT VERFÜGBAR</p><h2 id="anhoeren-title">Bitte <i>nicht</i> drücken.</h2></div><p class="section-detail">Links zu Plattform-Suchen. Direkte Farbenschwarz-Künstlerlinks werden hier noch ergänzt.</p></div>
-        <div class="platforms">
-          <a class="platform" href="https://open.spotify.com/search/Farbenschwarz" target="_blank" rel="noopener noreferrer" aria-label="Farbenschwarz auf Spotify suchen"><div class="platform-top"><span class="platform-symbol">♫</span><span aria-hidden="true">↗</span></div><span class="platform-name">Spotify</span><span class="platform-note">Farbenschwarz suchen</span></a>
-          <a class="platform" href="https://www.youtube.com/results?search_query=Farbenschwarz" target="_blank" rel="noopener noreferrer" aria-label="Farbenschwarz auf YouTube suchen"><div class="platform-top"><span class="platform-symbol">▷</span><span aria-hidden="true">↗</span></div><span class="platform-name">YouTube</span><span class="platform-note">Farbenschwarz suchen</span></a>
-          <a class="platform" href="https://music.apple.com/ch/search?term=Farbenschwarz" target="_blank" rel="noopener noreferrer" aria-label="Farbenschwarz auf Apple Music suchen"><div class="platform-top"><span class="platform-symbol">♪</span><span aria-hidden="true">↗</span></div><span class="platform-name">Apple Music</span><span class="platform-note">Farbenschwarz suchen</span></a>
+    <section class="section listen" id="streaming" aria-labelledby="stream-title">
+      <div class="wrap listen-grid">
+        <div><p class="section-index">02 / Ungeniert online</p><h2 id="stream-title">Bitte <span>nicht</span><br>drücken.</h2><p>Hier findest du Farbenschwarz auf den grossen Musikplattformen. Die Links öffnen vorerst die jeweilige Suche nach Farbenschwarz.</p></div>
+        <div class="links">
+          <a class="platform" href="https://open.spotify.com/search/Farbenschwarz" target="_blank" rel="noopener noreferrer" aria-label="Farbenschwarz auf Spotify suchen"><span class="symbol" aria-hidden="true">♫</span><span><strong>Spotify</strong><small>Jetzt suchen ↗</small></span></a>
+          <a class="platform" href="https://www.youtube.com/results?search_query=Farbenschwarz" target="_blank" rel="noopener noreferrer" aria-label="Farbenschwarz auf YouTube suchen"><span class="symbol" aria-hidden="true">▶</span><span><strong>YouTube</strong><small>Jetzt suchen ↗</small></span></a>
+          <a class="platform" href="https://music.apple.com/ch/search?term=Farbenschwarz" target="_blank" rel="noopener noreferrer" aria-label="Farbenschwarz auf Apple Music suchen"><span class="symbol" aria-hidden="true">♪</span><span><strong>Apple Music</strong><small>Jetzt suchen ↗</small></span></a>
         </div>
-        <p class="caution">Hinweis der Musikredaktion: Das Drücken eines Links erfolgt auf eigene Gefahr. Es kann zu Ohrwürmern kommen. Für allfällige Folgen übernehmen wir nur bedingt Verantwortung.</p>
       </div>
     </section>
-
-    <section class="section" id="projekt" aria-labelledby="projekt-title">
-      <div class="wrap about-grid">
-        <div><p class="section-no">04 / HINTER DEN KULISSEN</p><h2 id="projekt-title">Wer steckt<br><i>dahinter?</i></h2><div class="facts"><div class="fact"><span>Geburtsjahr</span><span>1997. Die Lage war damals schon ernst.</span></div><div class="fact"><span>Herkunft</span><span>Schweiz. Unschwer zu überhören.</span></div><div class="fact"><span>Stil</span><span>Satire, Rock, Moritat, Country, Walzer und musikalischer Ungehorsam.</span></div><div class="fact"><span>Motto</span><span>Verfügbar auf allen Streamingdiensten. Leider.</span></div></div></div>
-        <div class="about-copy"><p>Farbenschwarz ist kein Genre. Farbenschwarz ist die Entscheidung, sich bei keinem Genre länger als unbedingt nötig aufzuhalten.</p><p>Hinter dem Projekt stehen eigene Geschichten, Melodien und ein Hang zu schwarzem Humor. Was einmal als musikalischer Unfug begann, hat sich inzwischen zu einem erstaunlich ernsthaft betriebenen Unfug entwickelt.</p><p>Und irgendwann soll es hier noch viel mehr zu entdecken geben: alle Lieder, alle Texte, ihre Entstehungsgeschichten und Informationen, die wirklich niemand gebraucht hat.</p><button class="paw" data-easter="2" aria-label="Zweite geheimnisvolle Spur entdecken" title="Ein seltsamer Abdruck ...">♣</button></div>
-      </div>
+    <section class="album" id="album" aria-labelledby="album-title">
+      <div class="wrap album-inner"><div><div class="eyebrow">Demnächst · In Arbeit</div><h2 id="album-title">Das Leben ist <span>hart.</span></h2><p>Das erste grosse Farbenschwarz-Album nimmt Gestalt an. Neue Geschichten, vertraute Abgründe und gelegentlich Musik. Für 2027 geplant. <button class="paw paw-next" type="button" data-easter="album" aria-label="Kleines Geheimnis beim Album entdecken" title="Das sieht verdächtig aus">✣</button></p></div><div class="album-year" aria-label="Geplant für 2027">2027</div></div>
+    </section>
+    <section class="about" id="projekt" aria-labelledby="about-heading">
+      <div class="wrap about-grid"><div><p class="section-index">03 / Unnötige Hintergrundinformationen</p><h2 id="about-heading">Was ist<br><span>Farbenschwarz?</span></h2></div><div class="about-copy"><p>Farbenschwarz ist ein Schweizer Satire-Musikprojekt mit Wurzeln im Jahr 1997. Es erzählt seltsame Geschichten, wechselt Genres nach Gutdünken und nimmt Musik erstaunlich ernst – sich selbst eher weniger.</p><p>Diese Website ist erst der Anfang. Später sollen hier Lieder, Texte, Hintergründe und viele ausgesprochen unnötige Details zu entdecken sein. Der Pudel wird dazu Stellung nehmen müssen.</p></div></div>
     </section>
   </main>
-
-  <footer class="foot" id="unten"><div class="wrap"><div class="foot-grid"><div><div class="foot-title">Farbenschwarz.</div><p class="foot-caption">© <span id="year">2026</span> Farbenschwarz. Sämtliche Rechte vorbehalten.<br>Sämtliche Pflichten höflich abgelehnt.<br>Eine Kontaktadresse und mehr Archivmaterial folgen bei Gelegenheit.</p><button class="paw" data-easter="3" aria-label="Dritte geheimnisvolle Spur entdecken" title="Die letzte Spur?">♣</button></div><div class="foot-side"><a href="#anfang">Zurück an den Anfang ↑</a><br><a href="#musik">Veröffentlichungen</a><br><a href="#projekt">Über das Projekt</a><br>farbenschwarz.ch</div></div><div class="secret-panel" id="secret" aria-live="polite"><h3>Amt für unnötige Entdeckungen</h3><p>Glückwunsch. Sie haben drei verdächtige Symbole angeklickt und dafür keinen Preis gewonnen. Das geheime Archiv wird derzeit noch entstaubt. Die zuständige Fachkraft ist ein halb verbrannter Pudel und seit Donnerstag nicht mehr erreichbar.</p></div></div></footer>
+  <footer class="footer"><div class="wrap"><div class="footer-inner"><small>© <span id="year">2026</span> Farbenschwarz · Sämtliche Rechte vorbehalten.<br>Sämtliche Pflichten höflich abgelehnt.</small><div><a href="#start">Nach oben ↑</a><button type="button" class="paw" data-easter="footer" aria-label="Verdächtiges Zeichen am Seitenende entdecken" title="Ein völlig gewöhnliches Zeichen">✣</button></div></div><div class="secret" id="secret" aria-live="polite"><strong>Amt für musikalische Unfälle · Geheime Meldung Nr. 003</strong><p>Sie haben tatsächlich alle drei verdächtigen Symbole gefunden. Eine bemerkenswerte Leistung für jemanden, der offenbar nichts Besseres zu tun hat. Als Belohnung erhalten Sie dieses Zertifikat der absoluten Nutzlosigkeit. Der Pudel verweigert weiterhin jede Aussage.</p></div></div></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script>
-    (() => {
-      const found = new Set();
-      const messages = ["Eine Spur entdeckt. Das ist bedenklich. (1/3)", "Noch eine Spur. Sie scheinen Zeit zu haben. (2/3)", "Drei von drei. Das Archiv wurde widerwillig geöffnet. (3/3)"];
-      const toast = document.getElementById('toast');
-      let toastTimeout;
-      document.querySelectorAll('[data-easter]').forEach(button => {
-        button.addEventListener('click', () => {
-          const id = button.dataset.easter;
-          if (!found.has(id)) { found.add(id); button.style.opacity = '.32'; button.setAttribute('aria-label', 'Spur bereits entdeckt'); }
-          toast.textContent = messages[Math.min(found.size,3)-1];
-          toast.classList.add('show');
-          clearTimeout(toastTimeout);
-          toastTimeout = setTimeout(() => toast.classList.remove('show'), 3600);
-          if (found.size === 3) {document.getElementById('secret').classList.add('open');}
-        });
-      });
-      document.getElementById('year').textContent = new Date().getFullYear();
+    (()=>{
+      document.getElementById('year').textContent=new Date().getFullYear();
+      const found=new Set();const toast=document.getElementById('toast');let hide;
+      const lines=['Eine verdächtige Spur. (1/3)','Es ist Ihnen wohl wirklich langweilig. (2/3)','Alle Spuren gefunden. Die Behörde ist informiert. (3/3)'];
+      document.querySelectorAll('[data-easter]').forEach(btn=>btn.addEventListener('click',()=>{
+        const key=btn.dataset.easter;if(!found.has(key)){found.add(key);btn.style.color='#fa168a';btn.setAttribute('aria-label','Bereits entdeckte Spur')}
+        toast.textContent=lines[Math.min(found.size,3)-1];toast.classList.add('show');clearTimeout(hide);hide=setTimeout(()=>toast.classList.remove('show'),3600);
+        if(found.size===3){document.getElementById('secret').classList.add('open');}
+      }));
     })();
   </script>
 </body>
