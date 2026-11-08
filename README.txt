@@ -1,34 +1,46 @@
-FARBENSCHWARZ – STARTSEITE, VARIANTE A
-========================================
-Website für https://farbenschwarz.ch
+FARBENSCHWARZ – WEBSITE UPDATE (NOVEMBER 2026)
+================================================
 
-GitHub: farbenschwarz/farbenschwarz-website
+Deine Domain: https://farbenschwarz.ch
+Dein GitHub-Projekt: https://github.com/farbenschwarz/farbenschwarz-website
 
-SO BRINGST DU DIE NEUE VERSION ONLINE
-1. Öffne https://github.com/farbenschwarz/farbenschwarz-website
-2. Gehe zu „Add file“ > „Upload files“.
-3. Entpacke dieses ZIP und ziehe index.html, die fünf .webp-Dateien,
-   favicon.png und ggf. CNAME direkt in die Upload-Fläche.
-   (README.txt darf ebenfalls mit.)
-4. „Commit changes“ klicken.
-5. Lade https://farbenschwarz.ch neu (ggf. Strg + F5).
+NEU IN DIESER VERSION
+- Motto: Musik, die keiner bestellt hat
+- Vier Beweisstücke in der gewünschten Reihenfolge:
+  1. Will mer Schwiizer sind
+  2. Es ist so schön, ein Mönch zu sein
+  3. Briefmarkensammlung
+  4. Oh Gabi!
+- Jeweils Spotify + darunter YouTube.
+- Apple Music führt DIREKT zu deinem Künstlerprofil:
+  https://music.apple.com/ch/artist/farbenschwarz/6814561334
+- Originalcover 'Will mir Schwiizer sind' ergänzt.
+- Für 'Es ist so schön, ein Mönch zu sein' fehlt noch dein Originalcover:
+  an seiner Stelle steht ein bewusst gekennzeichneter Platzhalter.
 
-Bitte NICHT das Repository oder die CNAME-Datei löschen. Wenn GitHub
-CNAME bereits angelegt hat, soll dort weiterhin farbenschwarz.ch stehen.
-Die Hostpoint-DNS-Einträge bleiben unverändert.
+WICHTIG: Die Liedlinks auf Spotify/YouTube sind vorerst gezielte
+Suchlinks auf die jeweiligen Titel. Die individuellen Direktlinks zu den
+Aufnahmen konnte ich nicht zuverlässig ermitteln. Wenn du mir die
+8 konkreten Links gibst, ersetze ich die Suche durch direkte Songlinks.
 
-FÜR SPÄTER
-- Spotify, YouTube und Apple Music führen derzeit zur Suche statt
-  zu direkten Künstlerprofilen. Gib uns die richtigen Künstler-Links,
-  dann können wir das in der index.html ersetzen.
-- Neue Lieder/Cover lassen sich später ergänzen.
-- Versteckt sind drei kleine Zeichen, die man anklicken kann.
-- Kein Tracking, keine Cookies von dieser Webseite, keine externen Schriften.
+UPDATE ANLEITUNG
+1. ZIP herunterladen und ENTPACKEN.
+2. https://github.com/farbenschwarz/farbenschwarz-website öffnen.
+3. 'Add file' > 'Upload files' wählen.
+4. Dateien AUS dem entpackten Ordner hochladen: index.html,
+   alle mitgelieferten Cover-/Logo-Bilder, favicon.png, CNAME usw.
+   Du kannst alle Dateien auf einmal in die Upload-Fläche ziehen.
+5. GitHub fragt bei gleichen Dateinamen, ob sie ersetzt werden sollen.
+   Anschliessend 'Commit changes' wählen.
+6. Auf https://farbenschwarz.ch mit Strg+F5 neu laden.
 
-DATEIEN
-index.html                  Komplette Seite: HTML, CSS und JavaScript
-logo-farbenschwarz.webp     Original-Pudel-Logo, weboptimiert
-cover-*.webp                Vier Originalcover, weboptimiert
-favicon.png                 Kleines Symbol im Browser-Tab
-CNAME                       Verknüpfung mit farbenschwarz.ch
-README.txt                  Diese Anleitung
+Alle wichtigen Originaldateien liegen direkt im Repository-Hauptverzeichnis.
+Das bestehende CNAME bleibt 'farbenschwarz.ch'. DNS/Hostpoint/Pages
+NICHT verändern.
+
+Die zwei Bilder 'cover-s-haeidi.webp' und 'cover-der-parfuemeur.webp'
+sind in dieser Homepage nicht mehr verwendet, dürfen aber ruhig im
+Repository bleiben oder später entfernt werden.
+
+Es ist keine Verbindung zu einem externen CMS nötig; die Site ist
+weiterhin eine kostenlose statische GitHub-Pages-Website.
