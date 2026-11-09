@@ -103,13 +103,32 @@
     @media(max-width:600px){.wrap{padding:0 18px}.header-inner{min-height:62px}.brand{font-size:20px}.nav{gap:13px}.nav a{font-size:10px;letter-spacing:.3px}.nav a[href="#projekt"]{display:none}.nav .nav-highlight{padding:6px 9px}.hero{padding:37px 0 52px}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(45px,12.1vw,75px);margin-top:17px}.hero .intro{font-size:15px}.hero-image{max-width:410px;margin:12px auto 0;width:100%}.hero-image figcaption{right:6%;bottom:-5%}.slogan{padding:12px 14px;font-size:9px;letter-spacing:.8px}.section{padding:54px 0}.section-head{display:block;margin-bottom:24px}.section-note{margin-top:13px;max-width:440px}.covers{gap:11px}.song-copy{padding:13px 12px 15px}.song-title{font-size:16px}.song-note{font-size:11px;min-height:52px}.song-link{font-size:10px;letter-spacing:.2px}.song-links{margin-top:11px;gap:7px}.links{gap:8px}.platform{padding:13px 9px;min-height:119px}.platform strong{font-size:12px}.platform small{font-size:9px}.album{padding:44px 0}.album-inner{gap:10px;padding-left:17px}.album-year{min-width:70px;font-size:31px}.about{padding:52px 0}.about-grid{grid-template-columns:1fr;gap:20px}.footer-inner{align-items:start}}
     @media(max-width:370px){.nav a[href="#musik"]{display:none}.covers{grid-template-columns:1fr 1fr}.brand{font-size:18px}.album-year{display:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+    /* NEUHEITEN / Stand November 2026 */
+    .news-section{background:linear-gradient(165deg,#171216 0%,#101115 65%,#0a0a0c 100%);border-bottom:1px solid var(--edge)}
+    .release{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:40px;align-items:start}
+    .release-art{position:relative;max-width:500px}
+    .release-art img{width:100%;border-radius:5px;border:1px solid #ffffff2f;box-shadow:0 22px 65px #000a}
+    .release-stamp{position:absolute;top:15px;left:-12px;display:inline-block;background:var(--yellow);color:#0b0b0b;transform:rotate(-5deg);padding:7px 12px;font-size:11px;letter-spacing:1.1px;text-transform:uppercase;font-weight:900;box-shadow:0 5px 20px #0007}
+    .release-copy{min-width:0}
+    .release-eyebrow{color:var(--cyan)!important;letter-spacing:1.3px;text-transform:uppercase;font-size:11px!important;font-weight:900;margin:0 0 8px!important}
+    .release h3{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:clamp(41px,5.3vw,69px);line-height:1;margin:0 0 18px;color:var(--yellow);text-transform:uppercase}
+    .release-copy p{font-size:14px;line-height:1.8;color:#d8d2d0;margin:0 0 13px}
+    .release-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .release-actions .btn{padding:12px 14px;font-size:11px;letter-spacing:.6px}
+    .video-wrap{width:100%;aspect-ratio:16/9;overflow:hidden;margin-top:24px;border:1px solid #686268;border-radius:5px;background:#080808}
+    .video-wrap iframe{width:100%;height:100%;border:0;display:block}
+    @media(max-width:950px){.release{gap:26px}.release-actions .btn{font-size:10px}}
+    @media(max-width:760px){html{scroll-padding-top:116px}.header-inner{flex-direction:column;align-items:stretch;gap:2px;padding-top:9px;padding-bottom:7px}.nav{width:100%;display:flex;gap:19px;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;font-size:10px;letter-spacing:.5px}.nav a[href="#projekt"],.nav a[href="#musik"]{display:inline}.nav .nav-highlight{border:0;padding:0}.release{grid-template-columns:1fr;gap:26px}.release-art{max-width:500px;margin:auto}.release h3{font-size:50px}}
+    @media(max-width:420px){.nav{gap:14px}.nav a{font-size:9.5px}.release-actions{flex-direction:column}.release-actions .btn{width:100%}.release-stamp{left:-4px}}
+
   </style>
 </head>
 <body>
   <header class="header">
     <div class="wrap header-inner">
       <a class="brand" href="#start" aria-label="Farbenschwarz – Startseite"><span class="one">F</span><span class="two">A</span><span class="three">R</span><span class="four">B</span><span class="five">EN</span><span class="white">SCHWARZ</span></a>
-      <nav class="nav" aria-label="Hauptnavigation"><a href="#musik">Musik</a><a href="#projekt">Projekt</a><a class="nav-highlight" href="#streaming">Anhören ↗</a></nav>
+      <nav class="nav" aria-label="Hauptnavigation"><a href="#aktuell">Neuheiten</a><a href="#musik">Lieder</a><a class="nav-highlight" href="#streaming">Streams ↗</a><a href="#album">Planung</a><a href="#projekt">Info</a></nav>
     </div>
   </header>
   <main id="start">
@@ -119,26 +138,54 @@
           <div class="kicker">Schweizer Musikprojekt · Ungefragt seit 1997</div>
           <h1 id="hero-title">Musik, die<br><em>keiner</em><br>bestellt hat.</h1>
           <p class="intro">Musikalische Unfälle und hinterhältige Ohrwurmanschläge. Farbenschwarz macht Musik für Menschen mit einer gewissen Leidensfähigkeit.</p>
-          <div class="actions"><a class="btn primary" href="#musik">Lieder entdecken <span aria-hidden="true">↓</span></a><a class="btn" href="#streaming">Zu den Plattformen <span aria-hidden="true">↗</span></a></div>
+          <div class="actions"><a class="btn primary" href="#aktuell">Neu: S’Heidi <span aria-hidden="true">↓</span></a><a class="btn" href="#streaming">Zu den Plattformen <span aria-hidden="true">↗</span></a></div>
         </div>
         <figure class="hero-image"><img src="logo-farbenschwarz.webp" width="1100" height="1100" fetchpriority="high" alt="Das Farbenschwarz-Logo: ein halb farbenfroher, halb angekohlter Pudel mit Krone und wildem Blick"><figcaption>Wie ein bunter Pudel, nur angebrannt!</figcaption><button type="button" class="paw paw-in-hero" data-easter="pudel" aria-label="Verdächtige Pfote untersuchen" title="Was war das denn?">✣</button></figure>
       </div>
     </section>
     <div class="slogan"><b>✳</b> Verfügbar auf allen Streamingdiensten. Leider. <b>✳</b></div>
+    <section class="section news-section" id="aktuell" aria-labelledby="news-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="section-index">01 / Neuheiten</p><h2 id="news-heading">Frisch aus <span>den Alpen</span></h2></div>
+      <p class="section-note">Offizielle Mitteilung aus dem Farbenschwarz-Kinderliedwesen. Haftung ausgeschlossen.</p>
+    </div>
+    <div class="release">
+      <div class="release-art">
+        <img src="cover-heidi.webp" width="900" height="900" alt="Cover S’Heidi: Schweizer Alpen, Geissen, ein Holzschild und grotesk-komische Figuren" loading="lazy">
+        <span class="release-stamp">Neu veröffentlicht</span>
+      </div>
+      <div class="release-copy">
+        <p class="release-eyebrow">Das erste offizielle Kinderlied von Farbenschwarz</p>
+        <h3>S’Heidi</h3>
+        <p>Mit der Vertonung des klassischen Heidi-Stoffs bereichert Farbenschwarz die Schweizer Kinderliedlandschaft um ein Werk, nach dem niemand gefragt hat.</p>
+        <p>Johanna Spyri erzählte bereits 1880 von Heidi und dem Leben in den Alpen. Leider konnte sie damals nicht sämtliche historisch höchst fragwürdigen Ereignisse rund um den Alpöhi, die Geissen und den Geissenpeter berücksichtigen. Farbenschwarz holt diese Versäumnisse nun mit der gebotenen pädagogischen Verantwortung nach.</p>
+        <p>Liebevoll vertont, kindergartengerecht aufbereitet und selbstverständlich auch für die Oberstufe geeignet. Lehrpersonen wird empfohlen, vor dem gemeinsamen Singen die Zustimmung der Eltern und gegebenenfalls der Schulleitung einzuholen.</p>
+        <div class="release-actions">
+          <a class="btn primary" href="https://open.spotify.com/track/06JXhTtUMal8SQNNbNj8HM" target="_blank" rel="noopener noreferrer" aria-label="S’Heidi direkt auf Spotify anhören">Auf Spotify anhören ↗</a>
+          <a class="btn" href="https://www.youtube.com/watch?v=J8dfGGXdpIQ" target="_blank" rel="noopener noreferrer" aria-label="S’Heidi direkt auf YouTube anschauen">Auf YouTube ansehen ↗</a>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/J8dfGGXdpIQ" title="S’Heidi – Farbenschwarz auf YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <section class="section" id="musik" aria-labelledby="music-heading">
       <div class="wrap">
-        <div class="section-head"><div><p class="section-index">01 / Musikalische Vergehen</p><h2 id="music-heading">Die <span>Beweisstücke</span></h2></div><p class="section-note">Vier Kostproben aus dem Farbenschwarz-Universum mit Verdacht auf Moralzerlegung.</p></div>
+        <div class="section-head"><div><p class="section-index">02 / Musikalische Vergehen</p><h2 id="music-heading">Die <span>Beweisstücke</span></h2></div><p class="section-note">Vier Kostproben aus dem Farbenschwarz-Universum mit Verdacht auf Moralzerlegung.</p></div>
         <div class="covers">
-          <article class="song"><img src="cover-will-mer-schwiizer-sind.webp" width="820" height="820" loading="lazy" alt="Originalcover Will mir Schwiizer sind – ein weisshaariger Schweizer mit Akkordeon vor Alpen und Schweizerfahne"><div class="song-copy"><h3 class="song-title">Will mer Schwiizer sind</h3><p class="song-note">Eine heimatverbundene musikalische Selbstanzeige.</p><div class="song-links"><a class="song-link" href="https://open.spotify.com/search/Farbenschwarz%20Will%20mer%20Schwiizer%20sind" target="_blank" rel="noopener noreferrer" aria-label="Will mer Schwiizer sind auf Spotify suchen">Spotify ↗</a><a class="song-link youtube" href="https://www.youtube.com/results?search_query=Farbenschwarz%20Will%20mer%20Schwiizer%20sind" target="_blank" rel="noopener noreferrer" aria-label="Will mer Schwiizer sind auf YouTube suchen">YouTube ↗</a></div></div></article>
-          <article class="song"><img src="cover-moench.webp" width="820" height="820" loading="lazy" alt="Originalcover Es ist so schön, ein Mönch zu sein – ausgelassen feiernde Mönche mit Bierkrug an einer reich gedeckten Tafel"><div class="song-copy"><h3 class="song-title">Es ist so schön, ein Mönch zu sein</h3><p class="song-note">Andacht mit ungewissem Ausgang.</p><div class="song-links"><a class="song-link" href="https://open.spotify.com/search/Farbenschwarz%20Es%20ist%20so%20sch%C3%B6n%2C%20ein%20M%C3%B6nch%20zu%20sein" target="_blank" rel="noopener noreferrer" aria-label="Es ist so schön, ein Mönch zu sein auf Spotify suchen">Spotify ↗</a><a class="song-link youtube" href="https://www.youtube.com/results?search_query=Farbenschwarz%20Es%20ist%20so%20sch%C3%B6n%2C%20ein%20M%C3%B6nch%20zu%20sein" target="_blank" rel="noopener noreferrer" aria-label="Es ist so schön, ein Mönch zu sein auf YouTube suchen">YouTube ↗</a></div></div></article>
-          <article class="song"><img src="cover-briefmarkensammlung.webp" width="820" height="820" loading="lazy" alt="Originalcover Briefmarkensammlung – ein Sammler mit Lupe und zahlreichen Briefmarken"><div class="song-copy"><h3 class="song-title">Briefmarken&shy;sammlung</h3><p class="song-note">Ein Hobby voller Leidenschaft. Und erstaunlich vieler Briefmarken.</p><div class="song-links"><a class="song-link" href="https://open.spotify.com/search/Farbenschwarz%20Briefmarkensammlung" target="_blank" rel="noopener noreferrer" aria-label="Briefmarkensammlung auf Spotify suchen">Spotify ↗</a><a class="song-link youtube" href="https://www.youtube.com/results?search_query=Farbenschwarz%20Briefmarkensammlung" target="_blank" rel="noopener noreferrer" aria-label="Briefmarkensammlung auf YouTube suchen">YouTube ↗</a></div></div></article>
-          <article class="song"><img src="cover-oh-gabi.webp" width="820" height="820" loading="lazy" alt="Originalcover Oh Gabi! – bunte Blumen und farbige Schrift"><div class="song-copy"><h3 class="song-title">Oh Gabi!</h3><p class="song-note">Grosse Gefühle am Blumenstand. Gewisse Risiken inbegriffen.</p><div class="song-links"><a class="song-link" href="https://open.spotify.com/search/Farbenschwarz%20Oh%20Gabi%21" target="_blank" rel="noopener noreferrer" aria-label="Oh Gabi! auf Spotify suchen">Spotify ↗</a><a class="song-link youtube" href="https://www.youtube.com/results?search_query=Farbenschwarz%20Oh%20Gabi%21" target="_blank" rel="noopener noreferrer" aria-label="Oh Gabi! auf YouTube suchen">YouTube ↗</a></div></div></article>
+          <article class="song"><img src="cover-will-mer-schwiizer-sind.webp" width="820" height="820" loading="lazy" alt="Originalcover Will mir Schwiizer sind – ein weisshaariger Schweizer mit Akkordeon vor Alpen und Schweizerfahne"><div class="song-copy"><h3 class="song-title">Will mer Schwiizer sind</h3><p class="song-note">Eine heimatverbundene musikalische Selbstanzeige.</p><div class="song-links"><a class="song-link" href="https://open.spotify.com/intl-de/track/5tKSxnLQIwmU5NAnxkdQp8?si=ecd0fa284bcb4533" target="_blank" rel="noopener noreferrer" aria-label="Will mer Schwiizer sind auf Spotify öffnen">Spotify ↗</a><a class="song-link youtube" href="https://www.youtube.com/watch?v=QmD90kzmcQE" target="_blank" rel="noopener noreferrer" aria-label="Will mer Schwiizer sind auf YouTube ansehen">YouTube ↗</a></div></div></article>
+          <article class="song"><img src="cover-moench.webp" width="820" height="820" loading="lazy" alt="Originalcover Es ist so schön, ein Mönch zu sein – ausgelassen feiernde Mönche mit Bierkrug an einer reich gedeckten Tafel"><div class="song-copy"><h3 class="song-title">Es ist so schön, ein Mönch zu sein</h3><p class="song-note">Andacht mit ungewissem Ausgang.</p><div class="song-links"><a class="song-link" href="https://open.spotify.com/intl-de/album/46F3h3GAnami5XSrL98Zpv?si=ld3MF8DyTJqYko-IKnqrvg" target="_blank" rel="noopener noreferrer" aria-label="Es ist so schön, ein Mönch zu sein auf Spotify öffnen">Spotify ↗</a><a class="song-link youtube" href="https://www.youtube.com/watch?v=MA7KA08mIXs" target="_blank" rel="noopener noreferrer" aria-label="Es ist so schön, ein Mönch zu sein auf YouTube ansehen">YouTube ↗</a></div></div></article>
+          <article class="song"><img src="cover-briefmarkensammlung.webp" width="820" height="820" loading="lazy" alt="Originalcover Briefmarkensammlung – ein Sammler mit Lupe und zahlreichen Briefmarken"><div class="song-copy"><h3 class="song-title">Briefmarken&shy;sammlung</h3><p class="song-note">Ein Hobby voller Leidenschaft. Und erstaunlich vieler Briefmarken.</p><div class="song-links"><a class="song-link" href="https://open.spotify.com/intl-de/album/5BTJnsGX3RFM2MF7LSSiPp?si=_w06668cRkyqo3kDLqH-Pw" target="_blank" rel="noopener noreferrer" aria-label="Briefmarkensammlung auf Spotify öffnen">Spotify ↗</a><a class="song-link youtube" href="https://www.youtube.com/watch?v=VwLo2f1eHwU" target="_blank" rel="noopener noreferrer" aria-label="Briefmarkensammlung auf YouTube ansehen">YouTube ↗</a></div></div></article>
+          <article class="song"><img src="cover-oh-gabi.webp" width="820" height="820" loading="lazy" alt="Originalcover Oh Gabi! – bunte Blumen und farbige Schrift"><div class="song-copy"><h3 class="song-title">Oh Gabi!</h3><p class="song-note">Grosse Gefühle am Blumenstand. Gewisse Risiken inbegriffen.</p><div class="song-links"><a class="song-link" href="https://open.spotify.com/intl-de/album/4ZVeCDI8CtLNPQPPoAUUgT?si=F2Dslap-RWGv4M-gcyQbhw" target="_blank" rel="noopener noreferrer" aria-label="Oh Gabi! auf Spotify öffnen">Spotify ↗</a><a class="song-link youtube" href="https://www.youtube.com/watch?v=Btig3VsmPtE" target="_blank" rel="noopener noreferrer" aria-label="Oh Gabi! auf YouTube ansehen">YouTube ↗</a></div></div></article>
         </div>
       </div>
     </section>
     <section class="section listen" id="streaming" aria-labelledby="stream-title">
       <div class="wrap listen-grid">
-        <div><p class="section-index">02 / Ungeniert online</p><h2 id="stream-title">Bitte <span>nicht</span><br>drücken.</h2><p>Farbenschwarz zum Anhören – das Bundesamt für Gesundheit rät aufgrund unklarer Hinweise der WHO vom Konsum ab.</p></div>
+        <div><p class="section-index">03 / Ungeniert online</p><h2 id="stream-title">Bitte <span>nicht</span><br>drücken.</h2><p>Farbenschwarz zum Anhören – das Bundesamt für Gesundheit rät aufgrund unklarer Hinweise der WHO vom Konsum ab.</p></div>
         <div class="links">
           <a class="platform" href="https://open.spotify.com/search/Farbenschwarz" target="_blank" rel="noopener noreferrer" aria-label="Farbenschwarz auf Spotify suchen"><span class="symbol" aria-hidden="true">♫</span><span><strong>Spotify</strong><small>Jetzt suchen ↗</small></span></a>
           <a class="platform" href="https://www.youtube.com/results?search_query=Farbenschwarz" target="_blank" rel="noopener noreferrer" aria-label="Farbenschwarz auf YouTube suchen"><span class="symbol" aria-hidden="true">▶</span><span><strong>YouTube</strong><small>Jetzt suchen ↗</small></span></a>
@@ -147,10 +194,10 @@
       </div>
     </section>
     <section class="album" id="album" aria-labelledby="album-title">
-      <div class="wrap album-inner"><div><div class="eyebrow">Demnächst · In Arbeit</div><h2 id="album-title">Das Leben ist <span>hart.</span></h2><p>Das Album nimmt Gestalt an. Voraussichtlich 2027 auf allen Streamingdiensten. Aber seien Sie unbesorgt: Das Projekt wird wahrscheinlich eingestellt. <button class="paw paw-next" type="button" data-easter="album" aria-label="Kleines Geheimnis beim Album entdecken" title="Das sieht verdächtig aus">✣</button></p></div><div class="album-year" aria-label="Geplant für 2027">2027</div></div>
+      <div class="wrap album-inner"><div><div class="eyebrow">04 / Planung · Für 2027</div><h2 id="album-title">Das Leben ist <span>hart.</span></h2><p>Das Album nimmt Gestalt an. Voraussichtlich 2027 auf allen Streamingdiensten. Aber seien Sie unbesorgt: Das Projekt wird wahrscheinlich eingestellt. <button class="paw paw-next" type="button" data-easter="album" aria-label="Kleines Geheimnis beim Album entdecken" title="Das sieht verdächtig aus">✣</button></p></div><div class="album-year" aria-label="Geplant für 2027">2027</div></div>
     </section>
     <section class="about" id="projekt" aria-labelledby="about-heading">
-      <div class="wrap about-grid"><div><p class="section-index">03 / Unnötige Hintergrundinformationen</p><h2 id="about-heading">Was ist<br><span>Farbenschwarz?</span></h2></div><div class="about-copy"><p>Farbenschwarz ist ein Schweizer Satire-Musikprojekt mit Wurzeln im Jahr 1997. Es erzählt seltsame Geschichten, wechselt Genres nach Gutdünken und nimmt Musik erstaunlich ernst – sich selbst eher weniger.</p><p>Wir fragen uns ernsthaft, ob eine Gratis-Website für dieses Projekt nicht masslos übertrieben ist.</p></div></div>
+      <div class="wrap about-grid"><div><p class="section-index">05 / Unnötige Hintergrundinformationen</p><h2 id="about-heading">Was ist<br><span>Farbenschwarz?</span></h2></div><div class="about-copy"><p>Farbenschwarz ist ein Schweizer Satire-Musikprojekt mit Wurzeln im Jahr 1997. Es erzählt seltsame Geschichten, wechselt Genres nach Gutdünken und nimmt Musik erstaunlich ernst – sich selbst eher weniger.</p><p>Wir fragen uns ernsthaft, ob eine Gratis-Website für dieses Projekt nicht masslos übertrieben ist.</p></div></div>
     </section>
   </main>
   <footer class="footer"><div class="wrap"><div class="footer-inner"><small>© <span id="year">2026</span> Farbenschwarz · Sämtliche Rechte vorbehalten.<br>Sämtliche Pflichten höflich abgelehnt.</small><div><a href="#start">Nach oben ↑</a><button type="button" class="paw" data-easter="footer" aria-label="Verdächtiges Zeichen am Seitenende entdecken" title="Ein völlig gewöhnliches Zeichen">✣</button></div></div><div class="secret" id="secret" aria-live="polite"><strong>Amt für musikalische Unfälle · Geheime Meldung Nr. 003</strong><p>Sie haben tatsächlich alle drei verdächtigen Symbole gefunden. Eine bemerkenswerte Leistung für jemanden, der offenbar nichts Besseres zu tun hat. Als Belohnung erhalten Sie dieses Zertifikat der absoluten Nutzlosigkeit. Der Pudel verweigert weiterhin jede Aussage.</p></div></div></footer>
